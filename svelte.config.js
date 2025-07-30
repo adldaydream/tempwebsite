@@ -6,7 +6,7 @@ import { createHighlighter } from 'shiki';
 const shikiTheme = "min-light";
 const shikiHighlighter = await createHighlighter({
 	themes: [shikiTheme],
-	langs: ["javascript", "bash"],
+	langs: ["javascript", "bash"]
 });
 
 /** @type {import('mdsvex').MdsvexOptions} */
@@ -24,7 +24,6 @@ const mdsvexOptions = {
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	preprocess: [vitePreprocess(), mdsvex(mdsvexOptions)],
-
 	extensions: ['.svelte', '.svx'],
 
 	kit: {
@@ -32,10 +31,7 @@ const config = {
 			pages: 'public',
 			assets: 'public',
 			fallback: null
-		}),
-		prerender: {
-			default: true
-		}
+		})
 	}
 };
 
