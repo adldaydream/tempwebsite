@@ -795,19 +795,19 @@ Adelaide`.split("\n")
 
 		<div class="text-[#8B4513] font-serif text-xl leading-relaxed space-y-8">
 			<p>
-				Game jams are <em class="italic font-bold">magical</em>. That moment your wild idea becomes playable, when your team comes together to build something weird and wonderful - it's unforgettable. You don’t have to be an expert coder or game dev to join in. Just bring your creativity and curiosity.
+				Game jams are <em class="italic font-bold">sweet</em>. That moment your crazy idea becomes playable, when your team comes together to create something wonderful - it's unforgettable. You don’t have to be an expert coder or game dev to join in. Just bring your creativity and curiosity.
 			</p>
 
 			<p class="font-bold text-2xl">
-				You're invited to join the Daydream Adelaide!
+				You're invited to join Daydream Adelaide!
 			</p>
 
 			<p>
-				This is a worldwide teen-only game jam where you'll team up, brainstorm ideas, and bring them to life over a weekend. Whether you're into design, code, music, storytelling - there's a place for you.
+				What is Daydream? Daydream is a worldwide teen-only game jam where you'll team up, brainstorm ideas, and bring them to life over a weekend. Whether you're into design, code, music, storytelling - there's a place for you.
 			</p>
 
 			<p>
-				You’ll meet other hackers and creatives from around the world, build something awesome, and maybe even ship your first game.
+				You’ll meet other hackers and creatives from around Adelaide, build something awesome, and maybe even ship your first game. 
 			</p>
 
 			<p>
@@ -816,10 +816,6 @@ Adelaide`.split("\n")
 
 			<p>
 				Our goal is to help <span class="font-bold">4,000 teens</span> make projects they're proud of through Daydream. And yes - it's completely free to join.
-			</p>
-
-			<p class="text-center font-bold text-2xl mt-10 text-[#2C3E50]">
-				Check out our <a class="underline hover:text-pink" href="https://www.youtube.com/watch?v=hNYsNSY7Vz0">video!</a>
 			</p>
 		</div>
 	</div>
