@@ -634,7 +634,7 @@ Mumbai`.split("\n")
 			<h2
 			class="text-xl font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent absolute left-1/2 max-sm:translate-y-4 max-sm:mb-0 max-md:-mb-8 md:left-[calc(50%+4rem)] -translate-x-1/2 bottom-8 italic w-max md:text-lg max-sm:text-lg"
 			>
-				September 27th & 28th, 2025
+				Adelaide - Sep 27th & 28th, 2025
 			</h2>
 			<img src="daydream.png" alt="Daydream" class="h-40 mb-6 w-auto object-contain max-w-full px-4" />
 			<a href="https://hackclub.com" class="absolute top-0 -right-6 max-sm:right-0 max-sm:scale-80 animate-hover ![animation-delay:0.9s] ![--hover:-0.2rem]">
@@ -655,24 +655,35 @@ Mumbai`.split("\n")
 			<h4
 				class="text-2xl opacity-90 mt-2 font-serif bg-gradient-to-b from-[#487DAB] to-[#3F709A] bg-clip-text text-transparent max-sm:text-xl"
 			>
-				Organized by high schoolers in 100 cities worldwide
+				Organized by high schoolers in 100 cities worldwide. <br> Now in Adelaide, South Australia!
 			</h4>
 		</div>
 		
 		<div class="mt-8 flex flex-col items-center gap-3 z-5 max-md:scale-90">
-			<form on:submit={handleFormSubmit} class="rounded-full bg-white border-2 border-dark font-sans p-2 flex flex-row items-center gap-2 shadow-[0_3px_0_0_theme(colors.dark)] focus-within:border-pink focus-within:shadow-[0_3px_0_0_#E472AB] has-[button:active]:border-dark has-[button:active]:shadow-[0_3px_0_0_theme(colors.dark)] has-[button:focus]:border-dark has-[button:focus]:shadow-[0_3px_0_0_theme(colors.dark)]">
-				<input
-					type="email"
-					name="email"
-					placeholder="Enter email to organize Daydream"
-					class="w-80 px-3 py-1 text-dark focus:outline-none"
-					required
-				/>
-				<input type="hidden" name="mailingLists" value="cmd3c94kz0hvz0iwt7ps28cyd" />
-				<button type="submit" class="bg-light h-full px-5 rounded-full border-b-2 border-[#B3866A] cursor-pointer hover:border-b-4 hover:transform active:border-b-0 active:transform active:translate-y-0.5 focus:outline-none transition-all duration-100">
-					<img src="submit.svg" alt="Go">
-				</button>
-			</form>
+			<script>
+	function handleFormSubmit2(event) {
+		event.preventDefault();
+		const form = event.target;
+		const email = form.email.value;
+		const url = `https://daydreamadelaide.fillout.com/sign-up?email=${encodeURIComponent(email)}`;
+		window.open(url, '_blank'); // Use '_self' to open in same tab if needed
+	}
+</script>
+
+<form on:submit={handleFormSubmit2} class="rounded-full bg-white border-2 border-dark font-sans p-2 flex flex-row items-center gap-2 shadow-[0_3px_0_0_theme(colors.dark)] focus-within:border-pink focus-within:shadow-[0_3px_0_0_#E472AB] has-[button:active]:border-dark has-[button:active]:shadow-[0_3px_0_0_theme(colors.dark)] has-[button:focus]:border-dark has-[button:focus]:shadow-[0_3px_0_0_theme(colors.dark)]">
+	<input
+		type="email"
+		name="email"
+		placeholder="Register for Daydream Adelaide!"
+		class="w-80 px-3 py-1 text-dark focus:outline-none"
+		required
+	/>
+	<input type="hidden" name="mailingLists" value="cmd3c94kz0hvz0iwt7ps28cyd" />
+	<button type="submit" class="bg-light h-full px-5 rounded-full border-b-2 border-[#B3866A] cursor-pointer hover:border-b-4 hover:transform active:border-b-0 active:transform active:translate-y-0.5 focus:outline-none transition-all duration-100">
+		<img src="submit.svg" alt="Go">
+	</button>
+</form>
+
 			<a
 				href="https://forms.hackclub.com/daydream-stickers"
 				target="_blank"
@@ -775,142 +786,50 @@ Mumbai`.split("\n")
 	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-30 pointer-events-none -z-40"></div>
 	
 	<div class="relative max-w-4xl mx-auto h-full flex items-start pt-24 max-sm:pt-40 px-8 max-sm:px-2">
-		<div class="relative z-20 px-20 pt-20 pb-32 rounded-lg mb-0 max-sm:px-18" style="background-image: url('/letter-top.png'), linear-gradient(to bottom, #FCEFC5 100px, transparent 100px), url('/letter-loop.png'); background-size: 100% auto, 100% auto, 100% auto; background-repeat: no-repeat, no-repeat, repeat-y; background-position: top, top, top; background-attachment: local, local, local;">
-			<div class="absolute bottom-0 left-0 w-full h-24 z-10 pointer-events-none bg-[url('/clouds-loop.png')] bg-repeat-x bg-bottom bg-contain"></div>
-			<h2 class="text-5xl font-serif italic text-[#8B4513] mb-10 relative">
-				Dear Hacker,
-				<img src="/underline.svg" alt="" class="absolute left-0 -bottom-3 w-64 h-auto opacity-70">
-			</h2>
-			
-			<div class="text-[#8B4513] font-serif text-xl leading-relaxed space-y-8">
-				<p>
-					Hackathons are <em class="italic font-bold">magical</em>. You've probably felt it before: staying up all night 
-					with your friends, building something that actually works, finally meeting 
-					everyone whose code you've admired. That rush when your code compiles at 3:00 am 
-					and suddenly your wild idea becomes real.
-				</p>
-				
-				<p class="font-bold text-2xl">
-					Hack Club wants you to organize a hackathon.
-				</p>
-				
-				<p>
-					We want more hackers than ever from all over the world to have this life 
-					changing experience, and we want your help in making that happen.
-				</p>
-				
-				<p>
-					Sign up to organize a Daydream event in your city! All of our hackathons are 
-					teen-led. You do not need to have any previous experience, and Hack Club 
-					will provide you with funding and coaching.
-				</p>
-				
-				<p>
-					Our goal is to get <span class="font-bold">4,000 Hack Clubbers</span> to make projects they're proud of 
-					through Daydream, and we're giving out over <span class="font-bold">$120k in funding</span> to organizers 
-					like you!
-				</p>
-				
-				<p class="text-center font-bold text-2xl mt-10 text-[#2C3E50]">
-					Check out our <a class="underline hover:text-pink" href="https://www.youtube.com/watch?v=hNYsNSY7Vz0">video!</a>
-				</p>
-			</div>
-		</div>
-	</div>
+	<div class="relative z-20 px-20 pt-20 pb-32 rounded-lg mb-0 max-sm:px-18" style="background-image: url('/letter-top.png'), linear-gradient(to bottom, #FCEFC5 100px, transparent 100px), url('/letter-loop.png'); background-size: 100% auto, 100% auto, 100% auto; background-repeat: no-repeat, no-repeat, repeat-y; background-position: top, top, top; background-attachment: local, local, local;">
+		<div class="absolute bottom-0 left-0 w-full h-24 z-10 pointer-events-none bg-[url('/clouds-loop.png')] bg-repeat-x bg-bottom bg-contain"></div>
+		<h2 class="text-5xl font-serif italic text-[#8B4513] mb-10 relative">
+			Dear Teen,
+			<img src="/underline.svg" alt="" class="absolute left-0 -bottom-3 w-64 h-auto opacity-70">
+		</h2>
 
-	<div class="w-full absolute z-30 max-h-64 bottom-0 max-2xl:translate-y-1/4 max-lg:translate-y-1/2 pointer-events-none">	
-		<img src="/cloud-cover-1.png" alt="" class="w-full h-full object-contain min-[2048px]:hidden">
-		<div class="absolute top-1/2 left-1/2 w-1 h-1 -translate-x-1/2 -translate-y-1/2" data-point="0"></div>
-		<div class="absolute top-1/2 left-1/4 w-1 h-1 -translate-x-1/2 -translate-y-1/2" data-point="0.5"></div>
-	</div>
-	<div class="absolute -bottom-44 left-1/2 -translate-x-1/2 w-10/12 h-auto object-contain z-100 cursor-text flex flex-row max-lg:flex-wrap md:translate-y-0 max-lg:translate-y-1/5 items-center justify-center align-middle max-w-5xl">
-		<img src="gamejam-1.png" alt="Here's How You Organize a" class="flex-shrink min-w-0 object-contain">
-		<img src="gamejam-2.png" alt="Game Jam" class="flex-shrink min-w-0 object-contain">
+		<div class="text-[#8B4513] font-serif text-xl leading-relaxed space-y-8">
+			<p>
+				Game jams are <em class="italic font-bold">magical</em>. That moment your wild idea becomes playable, when your team comes together to build something weird and wonderful - it's unforgettable. You don’t have to be an expert coder or game dev to join in. Just bring your creativity and curiosity.
+			</p>
+
+			<p class="font-bold text-2xl">
+				You're invited to join the Daydream Adelaide!
+			</p>
+
+			<p>
+				This is a worldwide teen-only game jam where you'll team up, brainstorm ideas, and bring them to life over a weekend. Whether you're into design, code, music, storytelling - there's a place for you.
+			</p>
+
+			<p>
+				You’ll meet other hackers and creatives from around the world, build something awesome, and maybe even ship your first game.
+			</p>
+
+			<p>
+				No experience needed. Hack Club will guide you along the way with workshops, mentorship, and an epic online community.
+			</p>
+
+			<p>
+				Our goal is to help <span class="font-bold">4,000 teens</span> make projects they're proud of through Daydream. And yes - it's completely free to join.
+			</p>
+
+			<p class="text-center font-bold text-2xl mt-10 text-[#2C3E50]">
+				Check out our <a class="underline hover:text-pink" href="https://www.youtube.com/watch?v=hNYsNSY7Vz0">video!</a>
+			</p>
+		</div>
 	</div>
 </div>
-<div class="w-full h-64 bg-[#FCEFC5]"></div>
 
-<div class="flex flex-row flex-wrap w-full h-auto bg-gradient-to-b from-[#FCEFC5] to-[#FEC1CF] px-36 max-md:px-8 pb-50 max-sm:pb-24 relative" id="islands-container">
 
-	<img src="/clouds-left-2.png" alt="" class="absolute left-0 w-3/12 top-12 pointer-events-none">
-	<img src="/clouds-left-3.png" alt="" class="absolute left-0 w-2/12 bottom-32 pointer-events-none">
-	<img src="/clouds-right-2.png" alt="" class="absolute right-0 w-3/12 bottom-0 pointer-events-none">
 
-	<!-- SVG Path Overlay -->
-	<svg class="absolute inset-0 w-full h-full pointer-events-none z-0" id="path-svg">
-		<path id="dotted-path" stroke="rgba(255,255,255,0.5)" stroke-width="3" fill="none" stroke-dasharray="8,8" opacity="0.7"></path>
-	</svg>
-
-	<img src="paper-airplane.png" alt="Paper airplane" class="h-16 absolute z-10" id="paper-airplane">
-
-	<div class="flex flex-col items-center w-max basis-1/2 max-md:basis-full max-md:w-full z-10">
-		<div class="relative translate-y-8 max-md:translate-y-4 z-30">
-			<img src="/letter-1-front.png" alt="" class="object-contain absolute -bottom-16 -left-13 w-28 h-28 animate-hover ![--hover:-0.25rem] ![animation-delay:0.7s] z-20">
-			<img src="/letter-1-back.png" alt="" class="object-contain absolute -bottom-16 -left-13 w-28 h-28 animate-hover ![--hover:-0.25rem] ![animation-delay:0.7s] z-10">
-			<div class="relative w-72 h-40 max-md:w-80 animate-hover ![--hover:-0.15rem] ![animation-delay:1.7s] z-20" data-point="1">
-				<img src="paper1.png" alt="" class="w-full h-full object-contain">
-				<div class="absolute inset-0 justify-center text-center p-6 text-xl font-serif max-md:text-lg text-[#8B4513] inline-block content-center">
-					<span class="font-sans text-[#E472AB] font-bold text-[1.3rem] mr-1">#1:</span> Find a team of co-organizers
-				</div>
-			</div>
-		</div>
-		<img src="/island-1.png" alt="" class="w-72 h-72 object-contain max-md:w-64 max-md:h-64 animate-hover ![--hover:-0.25rem] ![animation-delay:0.8s] z-0">
-	</div>
-
-	<div class="flex flex-col items-center w-max basis-1/2 max-md:basis-full max-md:w-full translate-y-24 max-md:translate-y-8 z-10">
-		<div class="relative translate-y-24 max-md:translate-y-4 z-30">
-			<img src="/letter-2-front.png" alt="" class="object-contain absolute -bottom-16 -right-13 w-28 h-28 animate-hover ![--hover:-0.25rem] ![animation-delay:1.1s] z-20">
-			<img src="/letter-2-back.png" alt="" class="object-contain absolute -bottom-16 -right-13 w-28 h-28 animate-hover ![--hover:-0.25rem] ![animation-delay:1.1s] z-10">
-			<div class="relative w-72 h-40 max-md:w-80 animate-hover ![--hover:-0.15rem] ![animation-delay:0.3s] z-20" data-point="2">
-				<img src="paper2.png" alt="" class="w-full h-full object-contain">
-				<div class="absolute inset-0 justify-center text-center p-6 text-xl font-serif max-md:text-lg text-[#8B4513] inline-block content-center">
-					<span class="font-sans text-[#639DEB] font-bold text-[1.3rem] mr-1">#2:</span> Find a venue to host your hackathon
-				</div>
-			</div>
-		</div>
-		<img src="/island-3.png" alt="" class="w-86 h-86 object-contain max-md:w-64 max-md:h-64 animate-hover ![--hover:-0.25rem] ![animation-delay:1.2s] z-0">
-	</div>
-	<div class="flex flex-col items-center w-max basis-1/2 max-md:basis-full max-md:w-full -translate-x-12 max-md:translate-x-0 max-md:translate-y-8 z-10">
-		<div class="relative translate-y-8 max-md:translate-y-4 z-30">
-			<img src="/letter-3-front.png" alt="" class="object-contain absolute -bottom-18 left-24 w-28 h-28 animate-hover ![--hover:-0.25rem] ![animation-delay:0.9s] z-20">
-			<img src="/letter-3-back.png" alt="" class="object-contain absolute -bottom-18 left-24 w-28 h-28 animate-hover ![--hover:-0.25rem] ![animation-delay:0.9s] z-10">
-			<div class="relative w-72 h-40 max-md:w-80 animate-hover ![--hover:-0.15rem] ![animation-delay:1.4s] z-20" data-point="3">
-				<img src="paper3.png" alt="" class="w-full h-full object-contain">
-				<div class="absolute inset-0 justify-center text-center p-6 text-xl font-serif max-md:text-lg text-[#8B4513] inline-block content-center">
-					<span class="font-sans text-[#AB68E2] font-bold text-[1.3rem] mr-1">#3:</span> Find sponsors to buy merch and prizes
-				</div>
-			</div>
-		</div>
-		<img src="/island-2.png" alt="" class="w-72 h-72 object-contain max-md:w-64 max-md:h-64 animate-hover ![--hover:-0.25rem] ![animation-delay:2.1s] z-0">
-	</div>
-		<div class="flex flex-col items-center w-max basis-1/2 max-md:basis-full max-md:w-full translate-y-30 max-md:translate-y-8 z-10">
-		<div class="relative translate-y-24 max-md:translate-y-4 z-30">
-			<img src="/letter-4-front.png" alt="" class="object-contain absolute -bottom-16 -right-13 w-28 h-28 animate-hover ![--hover:-0.25rem] ![animation-delay:1.6s] z-20">
-			<img src="/letter-4-back.png" alt="" class="object-contain absolute -bottom-16 -right-13 w-28 h-28 animate-hover ![--hover:-0.25rem] ![animation-delay:1.6s] z-10">
-			<div class="relative w-72 h-40 max-md:w-80 animate-hover ![--hover:-0.15rem] ![animation-delay:2.3s] z-20" data-point="4">
-				<img src="paper4.png" alt="" class="w-full h-full object-contain">
-				<div class="absolute inset-0 justify-center text-center p-6 text-xl font-serif max-md:text-lg text-[#8B4513] inline-block content-center">
-					<span class="font-sans text-[#F2993E] font-bold text-[1.3rem] mr-1">#4:</span> Buy supplies, order food, and prepare workshops
-				</div>
-			</div>
-		</div>
-		<img src="/island-4.png" alt="" class="w-88 h-88 object-contain max-md:w-64 max-md:h-64 animate-hover ![--hover:-0.25rem] ![animation-delay:0.5s] z-0">
-	</div>
-
-	<!-- Final Card -->
-	<div class="flex flex-col items-center w-full basis-full translate-y-40 max-md:translate-y-12 z-20">
-		<div class="relative">
-			<div class="bg-[url('/card-final.png')] bg-contain bg-no-repeat bg-center text-2xl font-serif pt-24 px-8 w-128 h-96 text-center max-md:w-80 max-md:h-80 max-md:text-xl max-md:pt-16 animate-hover ![--hover:-0.15rem] ![animation-delay:1.9s]" data-point="5">
-				<span class="font-sans text-[#F2CC32] font-bold text-[1.5rem] mr-1">#5:</span> Run the game jam!
-			</div>
-		</div>
-	</div>
-
-	<img src="/clouds-pink-left.png" alt="" class="absolute left-0 w-5/12 bottom-0 translate-y-32 z-50 pointer-events-none">
-	<img src="/clouds-pink-right.png" alt="" class="absolute right-0 w-5/12 bottom-0 translate-y-32 z-50 pointer-events-none">
-
-	<div class="absolute top-0 left-0 w-full h-full bg-[url('brushstroking.png')] bg-size-[100vw_100vh] bg-repeat mix-blend-overlay opacity-60 pointer-events-none bg-position-[0_100vh]"></div>
 </div>
+
+
 
 <div class="w-full bg-gradient-to-b from-[#FDC5D1] to-[#FAE3C9] items-center justify-center px-0 md:px-8 relative pt-36">
 	<div class="w-full max-w-5xl lg:max-w-6xl mx-auto px-2 md:px-8">
@@ -1011,7 +930,13 @@ Mumbai`.split("\n")
 				</iframe>
 			</div>
 			
-			<p class="text-center font-sans text-2xl pt-12 max-sm:text-xl text-[#60574b] z-10000">All daydream events are organized by high school students like yourself! <br> <span class="font-bold"><a class="underline hover:text-pink" href="https://forms.hackclub.com/daydream">Sign up</a> to organize now!</span></p>
+			<p class="text-center font-sans text-2xl pt-12 max-sm:text-xl text-[#60574b] z-10000">
+	All Daydream events are open to high school students around the world! <br>
+	<span class="font-bold">
+		<a class="underline hover:text-pink" href="https://daydreamadelaide.fillout.com/sign-up">Sign up</a> to join the game jam!
+	</span>
+</p>
+
 		</div>
 	</div>
 
