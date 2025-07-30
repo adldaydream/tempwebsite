@@ -7,32 +7,32 @@
 	export let data;
 
 	// Cities where the game jam is happening
-	const cities = `Columbus
-Lisbon 
-Boston
-Giza
-Vancouver
-Houston
-New York City
-Bengaluru
-Tampa
-Auckland
-Omaha
-Phoenix
-Madrid
-Boise
-Ottawa
-Hangzhou
-Islamabad
-London
-Visakhapatnam
-Dubai
-San Francisco
-Minneapolis
-Seattle
-Signapore
-Sydney
-Mumbai`.split("\n")
+	const cities = `Welcome to
+Adelaide 
+Welcome to
+Adelaide
+Welcome to
+Adelaide
+Welcome to
+Adelaide
+Welcome to
+Adelaide
+Welcome to
+Adelaide
+Welcome to
+Adelaide
+Welcome to
+Adelaide
+Welcome to
+Adelaide
+Welcome to
+Adelaide
+Welcome to
+Adelaide
+Welcome to
+Adelaide
+Welcome to
+Adelaide`.split("\n")
 
 	function createSmoothPath(points: Array<{ x: number; y: number }>) {
 		if (points.length < 2) return "";
@@ -962,8 +962,8 @@ Mumbai`.split("\n")
 		<div class="relative transform rotate-1">
 			<img src="window-4.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
-				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">Can I organize a Daydream in my city?</h3>
-				<p class="text-sm">Definitely! Contact us via daydream@hackclub.com or join #daydream on slack.</p>
+				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">Can I leave during the event?</h3>
+				<p class="text-sm">Definitely! Just make sure to sign out and sign back in before 10pm!</p>
 			</div>
 		</div>
 
@@ -1008,7 +1008,7 @@ Mumbai`.split("\n")
 			<img src="window-2.png" alt="window" class="w-full h-full object-contain max-md:scale-130 max-xl:scale-110 max-lg:scale-115">
 			<div class="absolute top-20 left-12 right-12 bottom-16 flex flex-col items-center justify-center text-center px-24 opacity-70 max-[900px]:mx-[15vw] max-sm:mx-0 max-sm:px-5 max-lg:px-14 max-xl:px-18">
 				<h3 class="text-xl font-serif font-bold mb-4 max-lg:mb-0 max-md:text-base">What if my parents are concerned?</h3>
-				<p class="text-sm">We're here to help! You can see our parent guide here, or they can reach out to us at daydream@hackclub.com for questions.</p>
+				<p class="text-sm">We're here to help! You can see our parent guide here, or they can reach out to us at either ben@daydreamadl.dev or the daydream team at daydream@hackclub.com for questions.</p>
 			</div>
 		</div>
 
