@@ -1,10 +1,13 @@
-import { AIRTABLE_API_KEY, AIRTABLE_BASE_ID, GEOCODER_API_KEY } from '$env/static/private';
+// import { AIRTABLE_API_KEY, AIRTABLE_BASE_ID, GEOCODER_API_KEY } from '$env/static/private';
+const AIRTABLE_API_KEY = '0';
+const AIRTABLE_BASE_ID = '0';
+const GEOCODER_API_KEY = '0';
 
 export const prerender = true;
 
 /** @type {import('./$types').PageServerLoad} */
 export async function load() {
-	if (!AIRTABLE_API_KEY || !AIRTABLE_BASE_ID || !GEOCODER_API_KEY) {
+	if (true) {
 		return {
 			locations: []
 		};
@@ -15,7 +18,7 @@ export async function load() {
 		const airtableUrl = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/events?filterByFormula={triage_status}="Approved"`;
 		const airtableResponse = await fetch(airtableUrl, {
 			headers: {
-				'Authorization': `Bearer ${AIRTABLE_API_KEY}`
+			// 'Authorization': `Bearer ${AIRTABLE_API_KEY}`
 			}
 		});
 
@@ -37,21 +40,8 @@ export async function load() {
 			const addressParts = [location, state, country].filter(Boolean);
 			const address = addressParts.join(', ');
 
-			try {
-				const geocodeUrl = `https://geocoder.hackclub.com/v1/geocode?address=${encodeURIComponent(address)}&key=${GEOCODER_API_KEY}`;
-				const geocodeResponse = await fetch(geocodeUrl);
-
-				if (geocodeResponse.ok) {
-					const geocodeData = await geocodeResponse.json();
-					locations.push({
-						lat: geocodeData.lat,
-						lng: geocodeData.lng,
-						event_name,
-						city: location,
-						state,
-						country
-					});
-				}
+try {
+			// API call disabled, skipping geocodeResponse and location push
 			} catch (error) {
 				console.error(`Failed to geocode ${address}:`, error);
 			}
